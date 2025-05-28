@@ -12,7 +12,7 @@ app.get("/", (request: Request, response: Response) => {
 });
 
 app.listen(PORT, () => {
-    console.log("Server running at PORT: ", PORT);
+    console.log(`Server running at http://localhost:${PORT}`);
 }).on("error", (error) => {
     // gracefully handle error
     throw new Error(error.message);
