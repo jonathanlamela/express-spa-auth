@@ -9,7 +9,11 @@ export const userCreateValidator = yup.object({
 });
 
 export const changePasswordValidator = yup.object({
-    email: yup.string().email().required(),
     oldPassword: yup.string().required(),
     newPassword: yup.string().min(6).required()
+});
+
+export const changeInfoValidator = yup.object({
+    lastname: yup.string().nullable(),
+    firstname: yup.string().nullable(),
 });
